@@ -9,16 +9,20 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with GNU Emacs.  If not, see <http://www.gnu.org/licenses/>.
 
-;;; Time-stamp: <2018-05-20 18:38:20 stardiviner>
+;;; Time-stamp: <2018-06-04 07:57:58 stardiviner>
 
 ;;; Commentary:
 
-;;; This package will auto add to `company-nginx-keywords', you only need to:
-;;;
-;;;   (require 'company-nginx)
+;;; Usage:
+;; 
+;; To enable nginx keywords, you need to add following config to your init file:
+;;
+;; (eval-after-load 'nginx-mode
+;;   '(add-hook 'nginx-mode-hook #'company-nginx-keywords))
 
 ;;; Code:
 
+;;;###autoload
 (defun company-nginx-keywords ()
   "Add Nginx directive keywords to company-keywords-alist."
   (add-to-list 'company-keywords-alist
@@ -195,10 +199,6 @@
                  "zone_sync_ssl_password_file" "zone_sync_ssl_protocols"
                  "zone_sync_ssl_trusted_certificate" "zone_sync_ssl_verify" "zone_sync_ssl_verify_depth"
                  "zone_sync_timeout")))
-
-;;;###autoload
-(eval-after-load 'nginx-mode
-  '(add-hook 'nginx-mode-hook #'company-nginx-keywords))
 
 
 
