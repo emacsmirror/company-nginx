@@ -6,10 +6,6 @@ Add Nginx directives keywords to company-mode keywords alist.
 
 ``` emacs-lisp
 (use-package company-nginx
-    :ensure t
-    :config
-    (eval-after-load 'nginx-mode
-      '(add-hook 'nginx-mode-hook #'company-nginx-keywords))
-    )
+  :ensure t
+  :config (add-hook 'nginx-mode-hook (lambda () (add-to-list 'company-backends #'company-nginx))))
 ```
-
