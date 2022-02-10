@@ -4,7 +4,7 @@
 ;; Package-Requires: ((emacs "24") cl-lib company)
 ;; Package-Version: 0.2
 ;; Keywords: company nginx
-;; homepage: https://github.com/stardiviner/company-nginx
+;; homepage: https://repo.or.cz/company-nginx.git
 
 ;; You should have received a copy of the GNU General Public License
 ;; along with GNU Emacs.  If not, see <http://www.gnu.org/licenses/>.
